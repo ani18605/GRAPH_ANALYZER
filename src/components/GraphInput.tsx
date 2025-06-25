@@ -52,7 +52,7 @@ export const GraphInput: React.FC<GraphInputProps> = ({ onGraphSubmit }) => {
           <input
             type="number"
             min="2"
-            max="20"
+            max="200000"
             value={nodes}
             onChange={(e) => setNodes(parseInt(e.target.value))}
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
@@ -233,7 +233,7 @@ const EdgeInput: React.FC<EdgeInputProps> = ({
                     value={edge.weight}
                     onChange={(e) => updateEdge(index, 'weight', parseFloat(e.target.value))}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    step="0.1"
+                    step="1"
                     placeholder="Enter weight"
                   />
                 </div>
